@@ -1,0 +1,62 @@
+@mixin color($color) {
+  padding-top: 0.8em;
+  background-color: $color;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.jumbotron {
+  background-color: #219eb9;
+  text-align: center;
+  margin: 0;
+}
+
+.nav {
+  background-color: #f8f8fa;
+  height: 3em;
+  border-bottom: 2px solid #a1a1a359;
+
+  #home {
+    color: black;
+  }
+}
+
+.container {
+  margin-top: 2em;
+  width: 100%;
+}
+
+.row {
+  width: 100%;
+  margin-top: 4em;
+  margin-bottom: 4em;
+
+  justify-content: space-around;
+  .card {
+    text-align: center;
+  }
+  .card-body-1 {
+    @include color(blue);
+  }
+  .card-body-2 {
+    @include color(yellow);
+  }
+  .card-body-3 {
+    @include color(green);
+  }
+  .card-body-4 {
+    @include color(red);
+  }
+}
+
+#footer {
+  background-color: #219eb9;
+
+  h5 {
+    padding-top: 0.5em;
+  }
+}
